@@ -1,0 +1,9 @@
+.company_logos img {
+    filter: grayscale(5);
+    margin: 0 auto;
+    transition: .2s all;
+}
+
+.company_logos img:hover {
+    filter: grayscale(0);
+}

@@ -1,0 +1,96 @@
+.main{
+    /* background-color: rgb(203, 211, 214); */
+    padding:20px
+}
+.header{
+    padding:25px;
+    margin-top: 20px;
+    /* background-color: green; */
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header h1{
+    background: linear-gradient(to right, #499df1 0%, #fd6ac7 100%);
+    -webkit-background-clip: text;
+     background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+}
+
+
+.header p{
+    color:black;
+    font-weight: 100;
+}
+
+.button_selectors{
+    display: block;
+    margin-top:10px;
+    /* background-color: red; */
+    padding: 2px;
+}
+
+
+
+.tab_card{
+    margin-top: 5px;
+    padding:10px 20px 10px;
+    /* background-color: rgb(23, 43, 56); */
+    border-radius: 20px;
+    margin:6px;
+    color:black;
+}
+
+/* .tab_card::before{
+    content: "";
+    height: 10px;
+    width:30%;
+    background-color: red;
+    position: absolute;
+} */
+
+.button_selectors h2{
+    font-size: 17px;
+    text-align: left;
+    color:#499df1
+}
+.button_selectors .diva::before{
+    content: "";
+    height: 10px;
+    width:30%;
+    background-color: red;
+    position: absolute;}
+
+.button_selectors p{
+    font-size: 14px;
+    text-align: left;
+    font-weight: 1;
+}
+
+.content{
+    /* background-color: #fff; */
+    padding: 10px;
+    /* margin-top:10px; */
+    border-radius: 20px;
+}
+
+.content img{
+    /* width: 70% */
+    padding: 2px;
+    /* border: 1px solid red; */
+}
+
+.hero_header{
+    font-size: 60px;
+    /* background-color: red; */
+    color: black;
+
+}
+
+.tab_datasets{
+    background-color:rgb(238, 238, 238);
+    border-radius: 20px;
+padding:30px 30px 0 30px;
+}

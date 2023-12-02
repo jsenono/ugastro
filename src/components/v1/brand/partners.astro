@@ -1,0 +1,404 @@
+
+<script>
+    function marquee(element, options) {
+  var speed = options.speed || 50;
+  var gap = options.gap || 30;
+  var delayBeforeStart = options.delayBeforeStart || 0;
+  var direction = options.direction || 'left';
+  var duplicated = options.duplicated || true;
+  var pauseOnHover = options.pauseOnHover || true;
+  var startVisible = options.startVisible || true;
+
+  var container = document.querySelector(element);
+  var content = container.innerHTML;
+  var wrapper = document.createElement('div');
+  wrapper.classList.add('marquee-wrapper');
+  wrapper.innerHTML = content;
+
+  if (duplicated) {
+    wrapper.innerHTML += content;
+  }
+
+  container.innerHTML = '';
+  container.appendChild(wrapper);
+
+  var animation;
+  var distance = 0;
+  var scrollAmount = direction === 'left' ? speed : -speed;
+
+  function startAnimation() {
+    animation = setInterval(function() {
+      distance += scrollAmount;
+      wrapper.style.transform = 'translateX(' + distance + 'px)';
+
+      if (direction === 'left' && distance >= gap) {
+        distance = -container.offsetWidth;
+      } else if (direction === 'right' && distance <= -container.offsetWidth) {
+        distance = gap;
+      }
+    }, gap);
+  }
+
+  if (delayBeforeStart > 0) {
+    setTimeout(startAnimation, delayBeforeStart);
+  } else {
+    startAnimation();
+  }
+
+  if (pauseOnHover) {
+    container.addEventListener('mouseover', function() {
+      clearInterval(animation);
+    });
+
+    container.addEventListener('mouseout', function() {
+      startAnimation();
+    });
+  }
+}
+
+var marqueeLeft = document.querySelector('.brand__marquee-left');
+marquee(marqueeLeft, {
+  speed: 50,
+  gap: 30,
+  delayBeforeStart: 0,
+  direction: 'left',
+  duplicated: true,
+  pauseOnHover: true,
+  startVisible: true,
+});
+
+var marqueeRight = document.querySelector('.brand__marquee-right');
+marquee(marqueeRight, {
+  speed: 50,
+  gap: 30,
+  delayBeforeStart: 0,
+  direction: 'right',
+  duplicated: true,
+  pauseOnHover: true,
+  startVisible: true,
+});
+</script>
+
+<section class="brand pt-130 pb-130">
+    <div class="container">
+        <div class="brand__head text-center mb-100">
+            <h5 class="content">Experience the full power of an Helax content generator that <br> delivers premium results in seconds.</h5>
+            <h1 class="number">80,0000+</h1>
+            <h5 class="sub-title">professionals & teams choose Helax</h5>
+        </div>
+    </div>
+    <div class="brand__marquee">
+        <div class="brand__marquee-left">
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/img_01.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_02.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="assets/img/brand/img_03.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_04.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_05.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_06.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_07.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_08.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_09.png" alt=""></a>
+            </div>
+        </div>
+        <div class="brand__marquee-right mt-20">
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_10.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_11.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_12.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_13.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_14.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_15.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_16.png" alt=""></a>
+            </div>
+            <div class="brand__marquee-item">
+                <a href="#!"><img src="../src/assets/images/brand/img_17.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="brand__vector">
+        <div class="vector vector--1" data-parallax='{"y" : 80}'>
+            <img class="wow fadeInLeft" src="assets/img/shape/br_shape1.png" alt="">
+        </div>
+        <div class="vector vector--2" data-parallax='{"y" : 70}'>
+            <img class="wow fadeInRight" src="assets/img/shape/br_shape2.png" alt="">
+        </div>
+    </div>
+</section>
+
+<style>
+    .brand {
+  position: relative;
+  z-index: 1; }
+  .brand__head .content {
+    font-size: 30px;
+    margin-bottom: 22px; }
+    @media (max-width: 767px) {
+      .brand__head .content {
+        font-size: 23px; } }
+  .brand__head .number {
+    display: inline-block;
+    font-size: 180px;
+    margin-bottom: 15px; }
+    @media (max-width: 1199px) {
+      .brand__head .number {
+        font-size: 150px; } }
+    @media (max-width: 991px) {
+      .brand__head .number {
+        font-size: 100px; } }
+    @media (max-width: 767px) {
+      .brand__head .number {
+        font-size: 50px; } }
+  .brand__head .sub-title {
+    font-size: 24px; }
+  .brand__marquee .js-marquee-wrapper {
+    height: 64px; }
+  .brand__marquee-item {
+    float: left;
+    margin-right: 55px; }
+    .brand__marquee-item a {
+      padding: 13px 36px;
+      position: relative;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+      border: 1px solid #F1F1F1;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .brand__marquee-item a:hover {
+        background-color: white;
+        box-shadow: 0px 18px 51px rgba(130, 137, 162, 0.18); }
+        .brand__marquee-item a:hover img {
+          opacity: 1; }
+    .brand__marquee-item img {
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      opacity: .5; }
+  .brand__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/shape/hero_shape.png"), linear-gradient(47deg, #99E9A5 0%, #3847EF 100%);
+    z-index: 1;
+    padding: 40px; }
+    @media (max-width: 1199px) {
+      .brand__img {
+        width: 42%; } }
+    @media (max-width: 991px) {
+      .brand__img {
+        position: unset;
+        width: 100%;
+        margin-top: 50px; } }
+    .brand__img .image > img {
+      -webkit-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+      transform: translateY(-50px); }
+      @media (max-width: 991px) {
+        .brand__img .image > img {
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0); } }
+    @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+      .brand__img {
+        width: 42%; } }
+  .brand__animation-img .img {
+    position: absolute; }
+    .brand__animation-img .img--1 {
+      bottom: 46%;
+      left: 4%;
+      animation: updown 3s infinite linear;
+      -webkit-animation: updown 3s infinite linear; }
+      @media (max-width: 1199px) {
+        .brand__animation-img .img--1 {
+          bottom: 50%;
+          max-width: 70px; } }
+      @media (max-width: 991px) {
+        .brand__animation-img .img--1 {
+          bottom: 39%;
+          max-width: 80px;
+          left: 7%; } }
+      @media (max-width: 767px) {
+        .brand__animation-img .img--1 {
+          bottom: 37%;
+          max-width: 40px; } }
+    .brand__animation-img .img--2 {
+      top: -13%;
+      right: 21%;
+      animation: updown-2 2s infinite linear;
+      -webkit-animation: updown-2 2s infinite linear; }
+      @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+        .brand__animation-img .img--2 {
+          top: -17%;
+          right: 20%; } }
+      @media (max-width: 1199px) {
+        .brand__animation-img .img--2 {
+          top: -22%;
+          right: 19%;
+          max-width: 91px; } }
+      @media (max-width: 991px) {
+        .brand__animation-img .img--2 {
+          top: 0%;
+          right: 25%; } }
+      @media (max-width: 767px) {
+        .brand__animation-img .img--2 {
+          top: 0%;
+          right: 22%;
+          max-width: 50px; } }
+  .brand__area {
+    margin-left: 40px;
+    margin-right: 40px; }
+    @media (max-width: 767px) {
+      .brand__area {
+        margin-left: 0;
+        margin-right: 0; } }
+  .brand__item {
+    width: 33.33%;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    @media (max-width: 767px) {
+      .brand__item {
+        width: 50%; } }
+    .brand__item a {
+      display: inline-block;
+      width: 100%;
+      min-height: 150px; }
+      @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+        .brand__item a {
+          min-height: 120px; } }
+      @media (max-width: 1199px) {
+        .brand__item a {
+          min-height: 106px; } }
+    .brand__item:nth-child(3), .brand__item:nth-child(6), .brand__item:nth-child(9) {
+      border-right: none; }
+    .brand__item:nth-child(7), .brand__item:nth-child(8), .brand__item:nth-child(9) {
+      border-bottom: none; }
+    @media (max-width: 767px) {
+      .brand__item:nth-child(2), .brand__item:nth-child(4), .brand__item:nth-child(8) {
+        border-right: 0; } }
+    @media (max-width: 767px) {
+      .brand__item:nth-child(3), .brand__item:nth-child(9) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1); } }
+    @media (max-width: 767px) {
+      .brand__item:nth-child(7), .brand__item:nth-child(8) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
+    .brand__item:hover {
+      background-color: #292B2F; }
+      .brand__item:hover .dot {
+        opacity: 1; }
+      .brand__item:hover img:nth-child(1) {
+        opacity: 0; }
+      .brand__item:hover img:nth-child(2) {
+        opacity: 1; }
+    .brand__item img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      @media (max-width: 1199px) {
+        .brand__item img {
+          max-width: 130px; } }
+      .brand__item img:nth-child(2) {
+        opacity: 0; }
+    .brand__item .dot {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: #fff;
+      opacity: 0;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .brand__item .dot--1 {
+        top: -1px;
+        left: -1px; }
+      .brand__item .dot--2 {
+        top: -1px;
+        right: -1px; }
+      .brand__item .dot--3 {
+        right: -1px;
+        bottom: -1px; }
+      .brand__item .dot--4 {
+        left: -1px;
+        bottom: -1px; }
+  .brand__shape {
+    position: absolute;
+    top: 50%;
+    right: -222px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1; }
+    @media (max-width: 1199px) {
+      .brand__shape {
+        max-width: 300px; } }
+    .brand__shape img {
+      animation: spin 12s infinite linear;
+      -webkit-animation: spin 12s infinite linear; }
+  .brand__pb {
+    padding-bottom: 280px; }
+    @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+      .brand__pb {
+        padding-bottom: 250px; } }
+    @media (max-width: 1199px) {
+      .brand__pb {
+        padding-bottom: 250px; } }
+  @media (max-width: 991px) {
+    .brand__vector {
+      display: none; } }
+  .brand__vector .vector {
+    position: absolute; }
+    .brand__vector .vector--1 {
+      top: 27%;
+      left: 5%; }
+    .brand__vector .vector--2 {
+      top: 28%;
+      right: 5%; }
+</style>

@@ -1,0 +1,272 @@
+<section class="banner_section">
+    <div class="container">
+      <div class="banner_text">
+        <div class="ban_inner_text" data-aos="fade-up" data-aos-duration="1500">
+          <span>Powerful, easier and faster</span>
+          <h1>Grow your software <br> <span>faster & easier with Dashbord</span></h1>
+          <p>The World's simplest and fast platform that brings everything together</p>
+        </div>
+        <a data-aos="fade-up" data-aos-duration="1500" class="popup-youtube play-button"
+          data-url="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" data-toggle="modal"
+          data-target="#myModal" title="XJj2PbenIsU">
+          <div class="play_btn">
+            <img src="images/play_icon.png" alt="image">
+            <div class="waves-block">
+              <div class="waves wave-1"></div>
+              <div class="waves wave-2"></div>
+              <div class="waves wave-3"></div>
+            </div>
+          </div>
+          <span>WATCH PROMO</span>
+        </a>
+
+      </div>
+      <div class="banner_images" data-aos="fade-up" data-aos-duration="1500">
+        <img src="../../assets/images/banner/banner_01.png" alt="image_not_seen_banner1">
+        <div class="sub_images">
+          <img class="moving_animation" src="../../assets/images/banner/banner_02.png" alt="image">
+          <img class="moving_animation" src="../../assets/images/banner/banner_03.png" alt="image">
+          <img class="moving_animation" src="../../assets/images/banner/banner_04.png" alt="image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <style>
+
+.top_home_wraper {
+  /* background-image: url(../assets/images/banner/main_bg.png); */
+  background-color: red;
+  min-height: 1060px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.banner_section {
+  padding-top: 70px;
+}
+
+.banner_section .banner_text {
+  color: var(--text-white);
+  text-align: center;
+  padding-top: 95px;
+}
+
+.banner_section .banner_text .ban_inner_text h1 {
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.banner_section .banner_text .ban_inner_text p {
+  margin: 20px 0;
+}
+
+.banner_section .banner_text .ban_inner_text span:not(h1 span) {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.banner_section .banner_text form .form-group {
+  position: relative;
+  height: 50px;
+  width: 550px;
+  margin: 0 auto;
+}
+
+.banner_section .banner_text form .form-control {
+  height: 50px;
+  width: 100%;
+  border-radius: 100px;
+  margin: 0 auto;
+  padding-left: 47px;
+  background-image: url(../images/new/mesage_icon.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 50%;
+}
+
+.banner_section .banner_text form .form-control::placeholder {
+  color: #8f91bf;
+}
+
+.banner_section .banner_text form .form-group::before {
+  content: "";
+  width: 1px;
+  height: 18px;
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #b4b5d4;
+}
+
+.banner_section .banner_text form .form-group button {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  padding: 9px 30px;
+}
+
+.banner_section .banner_text form .form-group + span {
+  margin: 20px 0 35px 0;
+  text-align: center;
+  display: block;
+  font-size: 15px;
+}
+
+.banner_section .banner_text form .form-group + span a {
+  color: var(--text-white);
+  text-decoration: underline;
+}
+
+.banner_section .banner_text .play-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.banner_section .banner_text .play_btn {
+  position: relative;
+}
+
+.banner_section .banner_text .play-button span {
+  color: var(--orange);
+  font-weight: 700;
+  margin-left: 30px;
+  font-size: 13px;
+}
+
+.banner_section .banner_text .play-button span:first-child {
+  margin-left: 0;
+}
+
+.banner_section .banner_text .play-button .play_btn img {
+  width: 40px;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Banner images section css strat */
+.banner_section .banner_images {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 90px;
+  max-width: 920px;
+}
+
+.banner_section .banner_images > img {
+  border: 14px solid rgb(255 255 255 / 30%);
+  border-radius: 33px;
+  box-shadow: 0 0 14px 2px #0000001c;
+}
+
+.banner_section .banner_images .sub_images img {
+  position: absolute;
+  box-shadow: 0 0 14px 2px #0000001c;
+  border-radius: 20px;
+}
+
+.banner_section .banner_images .sub_images img:nth-child(1) {
+  top: 60px;
+  right: -55px;
+  animation-delay: 1s;
+}
+
+.banner_section .banner_images .sub_images img:nth-child(2) {
+  top: 135px;
+  left: -90px;
+  animation-delay: 1.5s;
+}
+
+.banner_section .banner_images .sub_images img:nth-child(3) {
+  bottom: 87px;
+  right: -110px;
+  animation-delay: 4s;
+}
+
+/* Banner Shapes section css strat */
+.banner_shapes .container {
+  position: relative;
+}
+
+.banner_shapes span {
+  position: absolute;
+}
+
+.banner_shapes span:first-child {
+  top: 197px;
+  right: 45px;
+  animation: moving_waves 12s infinite linear;
+}
+
+.banner_shapes span:nth-child(2) {
+  top: 435px;
+  left: -75px;
+  animation: moving_object 4s linear infinite;
+}
+
+.banner_shapes span:nth-child(3) {
+  top: 350px;
+  right: -145px;
+  animation: mymove 3s infinite;
+}
+
+.waves {
+  width: 90px;
+  height: 90px;
+  background: rgba(248, 142, 56, 0.9);
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  border-radius: 100%;
+  z-index: -1;
+  -webkit-animation: waves 3s ease-in-out infinite;
+  animation: waves 3s ease-in-out infinite;
+}
+
+.wave-1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  position: absolute;
+  top: 0;
+}
+
+.wave-3 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes waves {
+  0% {
+    -webkit-transform: scale(0.2, 0.2);
+    transform: scale(0.2, 0.2);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+
+  50% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  }
+
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+}
+
+
+  </style>
