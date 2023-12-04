@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styles from "../../../../styles/themes/tabs.module.css"
 let explanation_content= "In this exploration, I redesigned the SESAMM website regarding a leading artificial intelligence company."
 let img_link="../../assets/images/carbon/code-snapshot2.png"
-let title_content="f you have a Fireflies account and would like to avail of the bot-name customization feature ($5/bot/mo or $60/bot/annual), this rate is limited to 5 users only. If you intend to customize the bot name for other"
+let title_content="if you have a Fireflies account and would like to avail of the bot-name customization feature ($5/bot/mo or $60/bot/annual), this rate is limited to 5 users only. If you intend to customize the bot name for other"
 let icon="../../assets/images/carbon/1.png"
 
 const Tabs = () => {
