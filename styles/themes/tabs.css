@@ -4,8 +4,8 @@
 }
 .header{
     padding:25px;
-    margin-top: 20px;
-    background-color: green;
+    margin-top:0px;
+    /* background-color: green; */
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -57,11 +57,12 @@
     color:#499df1
 }
 .button_selectors .diva::before{
-    content: "";
+    /* content: "";
     height: 10px;
     width:30%;
-    background-color: red;
-    position: absolute;}
+    background-color: red; */
+    /* position: absolute; */
+}
 
 .button_selectors p{
     font-size: 14px;
@@ -84,7 +85,7 @@
 
 .hero_header{
     font-size: 60px;
-    /* background-color: red; */
+    background-color: red;
     color: black;
 
 }

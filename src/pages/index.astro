@@ -11,7 +11,7 @@ import Banner1 from "../components/v1/banners/banner.astro";
 import Banner2 from "../components/v1/banners/banner2.astro";
 import Solution from "../components/v1/features/solution.astro";
 import Powerful from "../components/v1/banners/powerful.astro";
-import Tabs2 from "../components/v1/Tabs/tabs-2.jsx"
+import Tabs3 from "../components/v1/Tabs/tabs-2.jsx"
 import Cta from "../components/v1/cta/cta.astro";
 import Footer from "../components/v1/footer.astro";
 ---
@@ -29,13 +29,11 @@ import Footer from "../components/v1/footer.astro";
 <Banner2/>
 <Solution/>
 <Powerful/>
-<Tabs2 client:only="react"/>
+<!-- <Tabs2/> -->
+<Tabs3 client:load/>
 <Cta/>
 <Footer/>
-
-
-
-			
+	
 		</div>
 		
 	</main>

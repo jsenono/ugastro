@@ -499,7 +499,7 @@ background: linear-gradient(to right, #046ACF 0%, #CF3A98 100%);
     content: "";
     height: 5px;
     width:90%;
-    background-color:rgb(109, 45, 45);
+    background-color:rgb(195, 199, 201);
     position: absolute;
 }
 
@@ -516,7 +516,7 @@ background: linear-gradient(to right, #046ACF 0%, #CF3A98 100%);
 
 .activebtn::before{
     content: "";
-    height: 10px;
+    height: 5px;
     width:90%;
     background-color: rgb(100, 237, 111);
     position: absolute;

@@ -1,0 +1,62 @@
+---
+import styles from "../../../../styles/themes/tabs.module2.css"
+let explanation_content= "In this exploration, I redesigned the SESAMM website regarding a leading artificial intelligence company."
+let img_link="../../assets/images/carbon/code-snapshot2.png"
+let title_content="if you have a Fireflies account and would like to avail of the bot-name customization feature ($5/bot/mo or $60/bot/annual), this rate is limited to 5 users only. If you intend to customize the bot name for other"
+let icon="../../assets/images/carbon/1.png"
+
+let tabs = [
+   { id: 'tab1', title: 'Tab 1', explanation: explanation_content, content: 'Content for Tab 1', img:img_link },
+   { id: 'tab2', title: 'Tab 2', explanation: explanation_content, content: 'Content for Tab 2', img:img_link },
+   { id: 'tab3', title: 'Tab 3', explanation: explanation_content, content: 'Content for Tab 3', img:img_link },
+];
+
+let activeTab = tabs[0].id;
+---
+
+<div class={`${styles.main} justify-content-center align-items-center margin-auto`}>
+   <div class='container tabs-main-section col-lg-9 justify-content-center align-items-center margin-auto '>
+       <div class={`${styles.header} text-center px-8 justify-content-center align-items-center align-self-center`}>
+           <h1>Our tabular features</h1>
+           <div>
+               <p>{title_content}</p>
+           </div>
+       </div>
+       <div class='row'>
+           <div class="row d-flex">
+               <div class={`${styles.button_selectors} row d-flex` }>
+                  {tabs.map((tab) => (
+                      <div 
+                          key={tab.id}
+                          class={activeTab === tab.id ? " activebtn diva col-lg-4" : "diva col-lg-4"}
+                          onClick={() => activeTab = tab.id}
+                      >
+                          <div class={`${styles.tab_card} tab-card justify-content-center align-items-center`}>
+                              <div class=' text-center justify-content-center align-items-center '>
+                                 <h2>{tab.title}</h2>
+                                 <p>{tab.explanation}</p>
+                              </div>
+                          </div>
+                      </div>
+                  ))}
+               </div>
+           </div>
+           <div class={`row d-flex ${styles.tab_datasets}`}>
+               <div class='col-lg-7 justify-content-center align-items-center align-self-center align-content-center'>
+                  <h2 class={styles.hero_header}>A new world is here </h2>
+                  <h4 class={styles.sub_hero_header}>Begining a new genre of contents</h4>
+                  <p>Knowledge is power. MeisterNote helps teams collect, organize, retrieve and share important information in central knowledge bases, boosting productivity and ensuring insights can be applied effectively.</p>
+               </div>
+               <div class="col-lg-5">
+                  <div class={styles.content}>
+                      {tabs.map((tab) =>
+                          activeTab === tab.id ? <div key={tab.id}>
+                              <img src={tab.img} class='img-fluid'></img>
+                          </div> : null
+                      )}
+                  </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
