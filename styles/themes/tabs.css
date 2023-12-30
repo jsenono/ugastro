@@ -12,17 +12,24 @@
 }
 
 .header h1{
-    background: linear-gradient(to right, #499df1 0%, #fd6ac7 100%);
-    -webkit-background-clip: text;
-     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 50px;
+    /* background: linear-gradient(to right, #499df1 0%, #227bee 100%); */
+    color:black;
+    font-size: 53px;
+    font-weight: 900;
+}
+
+body.dark .header h1{
+    color: var(--primary-300)
 }
 
 
 .header p{
     color:black;
     font-weight: 100;
+}
+
+body.dark .header p{
+    color: white;
 }
 
 .button_selectors{
@@ -52,9 +59,9 @@
 } */
 
 .button_selectors h2{
-    font-size: 17px;
+    font-size: 19px;
     text-align: left;
-    color:#499df1
+    color:#ffffff
 }
 .button_selectors .diva::before{
     /* content: "";
@@ -71,7 +78,7 @@
 }
 
 .content{
-    /* background-color: #fff; */
+    background-color: #d63232;
     padding: 10px;
     /* margin-top:10px; */
     border-radius: 20px;
@@ -83,9 +90,9 @@
     /* border: 1px solid red; */
 }
 
-.hero_header{
-    font-size: 60px;
-    background-color: red;
+.hero-header{
+    font-size: 50px;
+    /* background-color: red; */
     color: black;
 
 }
@@ -93,5 +100,12 @@
 .tab_datasets{
     background-color:rgb(238, 238, 238);
     border-radius: 20px;
-padding:30px 30px 0 30px;
+padding:40px 30px 100px 40px;
+justify-content: center;
+a
+}
+
+.tab_datasets p{
+    font-size: 16px;
+    font-weight: lighter;
 }

@@ -1,0 +1,208 @@
+<section>
+    <div class="container heroMain">
+
+        <div class="row d-flex">
+
+            <div class="col-lg-6 left-side">
+
+                <div class="hero_title">
+                    <h1>
+                        Providing an opportunity to the finest <span id="element"></span>
+                    </h1>
+                </div>
+
+                <div class="hero_content">
+                    <!-- <h4>
+                        A platform built by students for students from the ground up with the user in mind.
+                    </h4> -->
+                </div>
+ <div>
+
+<div class="row d-flex avatars">
+    <div class="col-lg-4 d-flex avatar-section">
+        
+            <!-- <div class="col">
+                <img class=" img-fluid" src="../../public/assets/images/heros/hero_img.png" alt="Avatar 1" >
+            </div>
+            <div class="col">
+                <img class=" img-fluid" src="../../public/assets/images/heros/hero_img.png" alt="Avatar 1" >
+            </div>
+
+            <div class="col">
+                <img class="img-fluid" src="../../public/assets/images/heros/hero_img.png" alt="Avatar 1" >
+            </div> -->
+           
+            <img class="img-fluid d-flex" src="../../public/assets/v2/avatar1.png" alt="Avatar 2"  >
+            <img class=" img-fluid" src="../../public/assets/images/heros/hero_img.png" alt="Avatar 3"  >
+            <img class="img-fluid d-flex" src="../../public/assets/v2/avatar1.png" alt="Avatar 2"  >
+
+       
+
+    </div>
+
+    <div class="col-lg-8 avatar-text">
+        Join over <b>100 students globally  </b>flying and studing at premium universities.
+    </div>
+
+    </div>
+
+</div>
+    
+                <div class="call_to_action_buttons row d-flex">
+                
+                        <button class="solid_btn">Proceed</button>
+                        <button class="outline_btn">Download Prospectus</button>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-6 right_side">
+                <img src="../../public/assets/v2/hero_transparent.png" alt="" class="">
+            </div>
+
+
+        </div>
+
+
+    </div>
+</section>
+
+
+<style>
+
+    /* avatar */
+
+    .avatar-b{
+        background-color: pink;
+    }
+
+    .avatars{
+        /* background-color: green; */
+        padding: 20px;
+    }
+
+    .avatar-text{
+        font-size: 19px;
+        font-weight: 300;
+        margin: auto;
+    }
+
+    .avatar-text b{
+        font-weight: 500;
+    }
+    .avatar-section{
+        /* background-color: red; */
+        padding: 10px;
+    }
+
+    .media-container {
+      display: flex;
+      align-items: center;
+      /* background-color: red; */
+    }
+
+    .avatar-section img {
+      width: 45%; 
+     /* height: 140px; */
+      border-radius: 50%; 
+      margin-right: -15px; 
+      object-fit: cover; 
+      border: 1px solid white; 
+      background-color: white;
+    }
+
+
+    body.dark .avatar-text{
+        color: white;
+    }
+    .text-container {
+      /* flex-grow: 1; */
+    }
+
+
+
+    .heroMain .right_side  img{
+        width: 120%;
+        margin-top: -70px;
+text-align: left;    }
+
+    .heroMain{
+        margin-top: 120px;
+    }
+
+    h1{
+        font-size: 52px;
+        padding: 10px;
+        font-weight: bolder;
+        text-align: left;
+        
+    }
+    h4{
+        font-size: 20px;
+        padding: 10px;
+        font-weight: lighter;
+    }
+
+    .call_to_action_buttons{
+        margin: auto;
+    }
+    .call_to_action_buttons button{
+        padding: 15px 40px 15px;
+    font-size:17px; 
+    border:none;
+    border-radius:40px;
+    background-color: var(--primary-100);
+    margin-right: 20px;
+    color: white
+
+    }
+
+    .call_to_action_buttons .outline_btn{
+        border: 2px solid var(--primary-100);
+background-color:transparent;
+color: black;
+    }
+  span{
+    
+          * TEXT GRADIENT color: #38b08e; background-image: -webkit-linear-gradient(45deg, #38b08e 41%, #d2bbb1 19%, #82ffbc 30%, #312eff 50%, #312eff 50%, #312eff 50%, #6e8fcc 50%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+          
+        
+  }
+    @media  (max-width: 500px) {
+
+        .right_side img{
+            width: 60%;
+          
+        }
+        
+    }
+
+
+    body.dark h1{
+        color: var(--primary-300)
+    }
+
+    body.dark h4{
+        color: var(--primary-300)
+    }
+
+
+    body.dark .call_to_action_buttons .outline_btn{
+        color: var(--primary-300)
+    }
+    
+</style>
+
+<script>
+  import Typed from 'typed.js';
+  
+  const typed = new Typed('#element', {
+    strings: ['SAT success.', 'Career success.', 'CIE success'],
+    typeSpeed: 200,
+    loopCount: Infinity,
+    startDelay: 0,
+    backDelay: 100,
+  });
+  
+  </script>

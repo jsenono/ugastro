@@ -1,47 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Navigation2 from "../components/v1/navigation/navigation2.astro";
-import Hero1 from "../components/v1/heros/mainHero.astro"
-import Courasel from "../components/v1/courasel.jsx"
-import Why from "../components/v1/heros/why.astro"
-import Testimonial from "../components/v1/testimonial/testimonial.astro"
-import Features2 from "../components/v1/features/features2.astro";
-import Banner1 from "../components/v1/banners/banner.astro";
-import Banner2 from "../components/v1/banners/banner2.astro";
-import Solution from "../components/v1/features/solution.astro";
-import Powerful from "../components/v1/banners/powerful.astro";
-import Tabs3 from "../components/v1/Tabs/tabs-2.jsx"
-import Cta from "../components/v1/cta/cta.astro";
-import Footer from "../components/v1/footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro"
+import Hero1 from "../components/mainHero.astro"
+ import Partners from "../components/partners.astro"
+ import Banner from "../components/banner.astro"
+ import Banner2 from "../components/banner/banner.astro"
+ import Powerful from "../components/powerful.astro"
+ import Why from "../components/why.astro"
+ import Tabs2 from "../components/tabs-2.jsx"
+ import Footer from "../components/footer.astro"
+ import InfoHero from "../components/hero/infohero.astro"
+ import InfoHero2 from "../components/hero/infohero2.astro"
+ import Cards from "../components/cards/cards.astro"
+ import Cards2 from "../components/cards/cards2.astro"
+
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<div>
-<Navigation2/>
-<Hero1/>
-<!-- <Courasel client:only="react" /> -->
-<Why/>
-<Testimonial/>
-<Features2/>
-<Banner1/>
-<Banner2/>
-<Solution/>
-<Powerful/>
-<!-- <Tabs2/> -->
-<Tabs3 client:load/>
-<Cta/>
-<Footer/>
-	
+
+<div>
+<h1>
+
+	<Layout>
+		<div class="container">
+			<Navigation/>
+			<Hero1/>
+			<Partners/>
+			<Banner/>
+			<Why/>
+			<InfoHero/>
+			<Cards/>
+			<InfoHero2/>
+			<Cards2/>
+			<Tabs2 client:load/>
+			<Banner2/>
+			<Footer/>
+			
 		</div>
-		
-	</main>
-</Layout>
+
+
+	</Layout>
+	
+</h1>
+</div>
+	
+
 
 <style>
-	main {
-	
-	}
+
 
 </style>
