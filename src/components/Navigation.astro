@@ -14,7 +14,7 @@
             <span class="logo navLogo">
 
         <a href="">
-            <img src="../../public/assets/v2/logos/2.png" class="img-fluid logo_image"/>
+            <img src="../../assets/v2/logos/2.png" class="img-fluid logo_image"/>
         </a>
             </span>
 
@@ -443,7 +443,8 @@ sidebarOpen.addEventListener("click" , () =>{
 });
 
 body.addEventListener("click" , e =>{
-    let clickedElm = e.target;
+    let clickedElm = e.target as HTMLElement;
+    let Clicks= clickedElm
 
     if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
         nav.classList.remove("active");

@@ -63,13 +63,7 @@ body.dark .header p{
     text-align: left;
     color:#ffffff
 }
-.button_selectors .diva::before{
-    /* content: "";
-    height: 10px;
-    width:30%;
-    background-color: red; */
-    /* position: absolute; */
-}
+
 
 .button_selectors p{
     font-size: 14px;
@@ -102,7 +96,7 @@ body.dark .header p{
     border-radius: 20px;
 padding:40px 30px 100px 40px;
 justify-content: center;
-a
+
 }
 
 .tab_datasets p{
